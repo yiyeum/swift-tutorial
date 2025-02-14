@@ -1,0 +1,61 @@
+# macOS system files
+.DS_Store
+
+# Xcode-specific
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+# Xcode build
+**/build/
+**/DerivedData/
+**/xcuserdata/
+
+# Swift Package Manager
+**/Packages/
+**/Package.pins
+**/Package.resolved
+**/.swiftpm/
+**/SourcePackages/
+
+# CocoaPods
+**/Pods/
+**/Podfile.lock
+
+# Carthage
+**/Carthage/Build/
+
+# Fastlane
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots/
+**/fastlane/test_output/
+
+# Temporary files
+*.swp
+*.swo
+*.bak
+
+# Xcode project workspace
+**/*.xcworkspace/
+
+# Simulator devices
+Library/Developer/CoreSimulator/Devices/
+
+# Archives
+**/*.xcarchive
+
+# Swift Playgrounds
+**/timeline.xctimeline
+**/playground.xcworkspace/
+
+# Ignore generated schemes
+**/xcshareddata/
+
+# Ignore user-specific project settings
+**/*.xcuserstate
