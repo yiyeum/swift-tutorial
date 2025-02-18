@@ -23,7 +23,7 @@ struct DiceView: View {
                 withAnimation {
                     numberOfPips = Int.random(in: 1...6)
                 }
-            }.buttonStyle(.bordered)
+            }.buttonStyle(.bordered).foregroundStyle(.white)
         }
 
     }
