@@ -27,9 +27,21 @@ class SampleData {
 
         do {
             modelContainer = try ModelContainer(for: schema, configurations: [modelConfiguration])
+            insertSampleData()
+            
+            try context.save()
         } catch {
             fatalError("Could not create ModelContainer: \(error)")
         }
-
+    }
+    
+    private func insertSampleData() {
+        for friend in Friend.sampleData {
+            context.insert(friend)
+        }
+        
+        for movie in Movie.sampleData {
+            context.insert(movie)
+        }
     }
 }

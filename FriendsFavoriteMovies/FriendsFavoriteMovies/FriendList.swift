@@ -14,20 +14,27 @@ struct FriendList: View {
 
     
     var body: some View {
-        List {
-            ForEach(friends) { friend in
-                Text(friend.name)
+        NavigationSplitView {
+            List {
+                ForEach(friends) { friend in
+                    NavigationLink(friend.name) {
+                        Text("Detail view for \(friend.name)")
+                            .navigationTitle("Friend")
+                            .navigationBarTitleDisplayMode(.inline)
+                    }
+                }
             }
-        }
-        .task {
-            context.insert(Friend(name: "Toby"))
-            context.insert(Friend(name: "Rody"))
+            .navigationTitle("Friends")
+        } detail: {
+            Text("Select a friend")
+                .navigationTitle("Friend")
+                .navigationBarTitleDisplayMode(.inline)
         }
     }
 }
 
 #Preview {
     FriendList()
-        .modelContainer(for: Friend.self, inMemory: true)
+        .modelContainer(SampleData.shared.modelContainer)
 
 }
