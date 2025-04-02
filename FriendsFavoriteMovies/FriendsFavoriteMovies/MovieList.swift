@@ -75,7 +75,7 @@ struct MovieList: View {
 #Preview("Filtered") {
     NavigationStack {
         MovieList(titleFilter: "tr")
-            .modelContainer(SampleData.shared.modelContainer)
+//            .modelContainer(SampleData.shared.modelContainer)
     }
 }
 
